@@ -176,22 +176,21 @@ for(var x=0;x<9;){
         x++
     }
 }
-if(AAAAAA[0]<700 || AAAAAA[0]>714)
-	{ 
-		var Adjust=(707/AAAAAA[0])
-		for(var x=9;x>0;x--)
-			{
-			AAAAAA[x]=AAAAAA[x]*Adjust
-			}
 
-	}
 
 
     if(true){
-        var point1X = game.input.pointer1.screenX
         var point5X = game.input.pointer5.screenX
         var point5Y = game.input.pointer5.screenY
-    
+		if(AAAAAA[0]<700 || AAAAAA[0]>714)
+		{ 
+			var Adjust=(707/AAAAAA[0])
+			for(var x=9;x>=0;x--)
+				{
+				AAAAAA[x]=AAAAAA[x]*Adjust
+				}
+
+		}
 
         console.log(point5X)
 
