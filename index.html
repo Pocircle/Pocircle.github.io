@@ -126,12 +126,12 @@ function create() {
     
 
 }
-var AAA=false
-var BBB=false
-var CCC=false
-var DDD=false
-var EEE=false
-var FFF=false
+var AAA=0
+var BBB=0
+var CCC=0
+var DDD=0
+var EEE=0
+var FFF=0
 
 var NoA =false
 var NoB =false
@@ -219,7 +219,7 @@ for(var x=0;x<9;){
         AAAAAA[9] >= 180 && AAAAAA[9] <=220 )
         {
             NoA=true
-            doCookieSetup(AAA,true)
+            doCookieSetup(AAA,1)
             $('#stamp1').append('<img id="image1" src="https://stickershop.line-scdn.net/stickershop/v1/product/14460/LINEStorePC/main.png;compress=true">')
 
         }
@@ -330,7 +330,8 @@ function doCookieSetup(name, value) {
 
 function CheckCookie(){
 
-if( (AAA==true &&  NoA==false )){
+if( (AAA=="1" &&  NoA==false )){
+    NoA=true
     $('#stamp1').append('<img id="image1" src="https://stickershop.line-scdn.net/stickershop/v1/product/14460/LINEStorePC/main.png;compress=true">')
 }
 
