@@ -121,7 +121,7 @@ function create() {
     game.input.addPointer();
     game.input.addPointer();
     game.input.addPointer();
-    listCookie();
+ 
    
     
 
@@ -216,7 +216,7 @@ for(var x=0;x<9;){
         AAAAAA[6]>=296  && AAAAAA[6]<=336  && 
         AAAAAA[7]>=296  && AAAAAA[7]<=336  && 
         AAAAAA[8]>=280  && AAAAAA[8]<=320  && 
-        AAAAAA[9] >= 180 && AAAAAA[9] <=220 || (AAA==true &&  NoA==false ))
+        AAAAAA[9] >= 180 && AAAAAA[9] <=220 )
         {
             NoA=true
             doCookieSetup(AAA,true)
@@ -327,19 +327,18 @@ function doCookieSetup(name, value) {
   expires.setTime(expires.getTime() + 86400000);
   document.cookie = name + "=" + escape(value) + ";expires=" + expires.toGMTString()
 }
-function listCookie() {
-  document.writeln("<table>");
-  document.writeln("<tr><th>Name<th>Value");
-  cookieArray = document.cookie.split(";");
-  for (var i = 0; i < cookieArray.length; i++) {
-    thisCookie = cookieArray[i].split("=");
-    cName = unescape(thisCookie[0]);
-    cValue = unescape(thisCookie[1]);
-    document.writeln("<tr><td>" + cName + "</td><td>" + cValue + "</td>");
-  }
-  document.writeln("</table>");
+
+function CheckCookie(){
+
+if( (AAA==true &&  NoA==false )){
+    $('#stamp1').append('<img id="image1" src="https://stickershop.line-scdn.net/stickershop/v1/product/14460/LINEStorePC/main.png;compress=true">')
 }
 
+
+
+
+
+}
 
 
 </script>
