@@ -10,7 +10,7 @@
 <!--  opacity: 0.5;	隱藏 : 0 -->
 <style>
       #phaser-example canvas{
-        opacity: 0.5;				
+        opacity: 0;				
         position: absolute;
         top: 0;
         left: 0;
@@ -104,6 +104,15 @@ function preload() {
     game.scale.pageAlignVertically = true;
     game.stage.backgroundColor = 'rgba(0,0,0,0)'
 }
+
+function doCookieSetup(name, value) {
+  var expires = new Date();
+  //有效時間保存 2 天 2*24*60*60*1000
+  expires.setTime(expires.getTime() + 86400000);
+  document.cookie = name + "=" + escape(value) + ";expires=" + expires.toGMTString()
+}
+
+
 function create() {
 
     
@@ -205,10 +214,10 @@ for(var x=0;x<9;){
         AAAAAA[6]>=296  && AAAAAA[6]<=336  && 
         AAAAAA[7]>=296  && AAAAAA[7]<=336  && 
         AAAAAA[8]>=280  && AAAAAA[8]<=320  && 
-        AAAAAA[9] >= 180 && AAAAAA[9] <=220 )
+        AAAAAA[9] >= 180 && AAAAAA[9] <=220 || NoA==true )
         {
             NoA=true
-            
+            doCookieSetup(NoA,true)
             $('#stamp1').append('<img id="image1" src="https://stickershop.line-scdn.net/stickershop/v1/product/14460/LINEStorePC/main.png;compress=true">')
 
         }
