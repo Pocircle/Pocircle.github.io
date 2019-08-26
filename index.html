@@ -326,8 +326,8 @@ function render() {
 function doCookieSetup(name, value) {
   var expires = new Date();
   //有效時間保存 2 天 2*24*60*60*1000
-  expires.setTime(expires.getTime() + 20000);
-  document.cookie = name + "=" + escape(value) + ";expires=" + expires.toGMTString()
+  expires.setTime(expires.getTime() + 60000);
+  document.cookie = name=true + "=" + escape(value) + ";expires=" + expires.toGMTString()
 }
 
 function CheckCookie(){
