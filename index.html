@@ -105,7 +105,7 @@ function preload() {
     game.stage.backgroundColor = 'rgba(0,0,0,0)'
 }
 
-CheckCookie();
+
 
 function create() {
 
@@ -328,16 +328,16 @@ function CheckCookie(){
   cookieArray = document.cookie.split(";");
   for (var i = 0; i < cookieArray.length; i++) {
     thisCookie = cookieArray[i].split("=");
-    cName[i] = unescape(thisCookie[0]);
-    cValue[i] = unescape(thisCookie[1]);
+    cName = unescape(thisCookie[0]);
+    cValue = unescape(thisCookie[1]);
   
 
 
-if( (cName[i]==AAA && cValue[i]==true &&  NoA==false )){
+if( (cName==AAA && cValue==true &&  NoA==false )){
     NoA=true
     $('#stamp1').append('<img id="image1" src="https://stickershop.line-scdn.net/stickershop/v1/product/14460/LINEStorePC/main.png;compress=true">')
 }
-  }
+}
 
 
 
