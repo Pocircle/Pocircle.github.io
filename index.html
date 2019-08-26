@@ -213,7 +213,7 @@ for(var x=0;x<9;){
         AAAAAA[9] >= 180 && AAAAAA[9] <=220 )
         {
             NoA=true
-            doCookieSetup(A,1)
+            doCookieSetup(0,1)
             $('#stamp1').append('<img id="image1" src="https://stickershop.line-scdn.net/stickershop/v1/product/14460/LINEStorePC/main.png;compress=true">')
 
         }
@@ -231,7 +231,7 @@ for(var x=0;x<9;){
         AAAAAA[8]>=270  && AAAAAA[8]<=330  &&
         AAAAAA[9] >= 193 && AAAAAA[9] <=253 ){
             NoB=true
-            doCookieSetup(B,1)
+            doCookieSetup(1,1)
             $('#stamp2').append('<img id="image2" src="https://is.gd/9oorDa">')
         }
         if(NoC==false && point5X >50 &&							//第三個印章判斷
@@ -246,7 +246,7 @@ for(var x=0;x<9;){
         AAAAAA[8]>=180  && AAAAAA[8]<=220  &&
         AAAAAA[9] >= 180 && AAAAAA[9] <=220 ){
             NoC=true
-            doCookieSetup(C,1)
+            doCookieSetup(2,1)
             $('#stamp3').append('<img id="image3" src="https://www.goodlucktripjapan.com/special/seibu-kanahei/img/ticket_present/PU7_24@2x.png">')
         }
 		if(NoD==false && point5X >50 &&							//第四個印章判斷
@@ -261,7 +261,7 @@ for(var x=0;x<9;){
         AAAAAA[8]>=203  && AAAAAA[8]<=243  &&
         AAAAAA[9] >= 203 && AAAAAA[9] <=243 ){
             NoD=true
-            doCookieSetup(D,1)
+            doCookieSetup(3,1)
             $('#stamp4').append('<img id="image4" src="https://pic.pimg.tw/miniruby/1484591502-3234303129.gif">')
         }
 		if(NoE==false && point5X >50 &&							//第五個印章判斷
@@ -276,7 +276,7 @@ for(var x=0;x<9;){
         AAAAAA[8]>=180  && AAAAAA[8]<=220  &&
         AAAAAA[9]>=180  && AAAAAA[9]<=220 ){
             NoE=true
-            doCookieSetup(E,1)
+            doCookieSetup(4,1)
             $('#stamp5').append('<img id="image5" src="http://dl.stickershop.line.naver.jp/products/0/0/1/8030/android/stickers/15638533.png">')
         }
 		if(NoF==false && point5X >50 &&							//第六個印章判斷
@@ -292,7 +292,7 @@ for(var x=0;x<9;){
         AAAAAA[9]>=203  && AAAAAA[9]<=243 ){
             NoF=true
             
-            doCookieSetup(F,1)
+            doCookieSetup(5,1)
             $('#stamp6').append('<img id="image6" src="https://thumbs.gfycat.com/BelovedAmpleIchthyostega-size_restricted.gif">')
             listCookie()
         }
@@ -334,27 +334,27 @@ var cValue=[0,0,0,0,0,0]
     thisCookie = cookieArray[i].split("=");
     var k=unescape(thisCookie[0]);
 
-    if(k==A){
+    if(k==0){
       cName[0] = unescape(thisCookie[0]);
       cValue[0] = unescape(thisCookie[1]);
     }
-    else if(k==B){
+    else if(k==1){
       cName[1] = unescape(thisCookie[0]);
       cValue[1] = unescape(thisCookie[1]);
     }
-    else if(k==C){
+    else if(k==2){
       cName[2] = unescape(thisCookie[0]);
       cValue[2] = unescape(thisCookie[1]);
     }
-    else if(k==D){
+    else if(k==3){
       cName[3] = unescape(thisCookie[0]);
       cValue[3] = unescape(thisCookie[1]);
     }
-    else if(k==E){
+    else if(k==4){
       cName[4] = unescape(thisCookie[0]);
       cValue[4] = unescape(thisCookie[1]);
     }
-    else if(k==F){
+    else if(k==5){
       cName[5] = unescape(thisCookie[0]);
       cValue[5] = unescape(thisCookie[1]);
     }
@@ -364,27 +364,27 @@ var cValue=[0,0,0,0,0,0]
   
 
 
-    if( (cName[0]==A && cValue[0]==1 &&  NoA==false )){           //第一個印章判斷是否蓋過
+    if( (cName[0]==0 && cValue[0]==1 &&  NoA==false )){           //第一個印章判斷是否蓋過
     NoA=true
     $('#stamp1').append('<img id="image1" src="https://stickershop.line-scdn.net/stickershop/v1/product/14460/LINEStorePC/main.png;compress=true">')
     }
-    if( (cName[1]==B && cValue[1]==1 &&  NoB==false )){           //第二個印章判斷是否蓋過
+    if( (cName[1]==1 && cValue[1]==1 &&  NoB==false )){           //第二個印章判斷是否蓋過
     NoB=true
     $('#stamp2').append('<img id="image2" src="https://is.gd/9oorDa">')
     }
-    if( (cName[2]==C && cValue[2]==1 &&  NoC==false )){           //第三個印章判斷是否蓋過
+    if( (cName[2]==2 && cValue[2]==1 &&  NoC==false )){           //第三個印章判斷是否蓋過
     NoC=true
     $('#stamp3').append('<img id="image3" src="https://www.goodlucktripjapan.com/special/seibu-kanahei/img/ticket_present/PU7_24@2x.png">')
     }
-    if( (cName[3]==D && cValue[3]==1 &&  NoD==false )){           //第四個印章判斷是否蓋過
+    if( (cName[3]==3 && cValue[3]==1 &&  NoD==false )){           //第四個印章判斷是否蓋過
     NoD=true
     $('#stamp4').append('<img id="image4" src="https://pic.pimg.tw/miniruby/1484591502-3234303129.gif">')
     }
-    if( (cName[4]==E && cValue[4]==1 &&  NoE==false )){           //第五個印章判斷是否蓋過
+    if( (cName[4]==4 && cValue[4]==1 &&  NoE==false )){           //第五個印章判斷是否蓋過
     NoE=true
     $('#stamp5').append('<img id="image5" src="http://dl.stickershop.line.naver.jp/products/0/0/1/8030/android/stickers/15638533.png">')
     }
-    if( (cName[5]==F && cValue[5]==1 &&  NoF==false )){           //第六個印章判斷是否蓋過
+    if( (cName[5]==5 && cValue[5]==1 &&  NoF==false )){           //第六個印章判斷是否蓋過
     NoF=true
     $('#stamp6').append('<img id="image6" src="https://thumbs.gfycat.com/BelovedAmpleIchthyostega-size_restricted.gif">')
     }
@@ -418,30 +418,31 @@ function listCookie() {
     thisCookie = cookieArray[i].split("=");
     var k=unescape(thisCookie[0]);
 
-    if(k==A){
+    if(k==0){
       cName[0] = unescape(thisCookie[0]);
       cValue[0] = unescape(thisCookie[1]);
     }
-    else if(k==B){
+    else if(k==1){
       cName[1] = unescape(thisCookie[0]);
       cValue[1] = unescape(thisCookie[1]);
     }
-    else if(k==C){
+    else if(k==2){
       cName[2] = unescape(thisCookie[0]);
       cValue[2] = unescape(thisCookie[1]);
     }
-    else if(k==D){
+    else if(k==3){
       cName[3] = unescape(thisCookie[0]);
       cValue[3] = unescape(thisCookie[1]);
     }
-    else if(k==E){
+    else if(k==4){
       cName[4] = unescape(thisCookie[0]);
       cValue[4] = unescape(thisCookie[1]);
     }
-    else if(k==F){
+    else if(k==5){
       cName[5] = unescape(thisCookie[0]);
       cValue[5] = unescape(thisCookie[1]);
     }
+
 
 
     document.writeln("<tr><td>" + cName + "</td><td>" + cValue + "</td>");
