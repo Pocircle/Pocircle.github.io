@@ -329,7 +329,7 @@ var cName=[0,0,0,0,0,0]
 var cValue=[0,0,0,0,0,0]
 
   cookieArray = document.cookie.split(";");
-  for (var i = 0; i < 6; i++) {           // i的數字設有幾個印章
+  for (var i = 0; i < 12; i++) {           // i的數字設有幾個印章
     thisCookie = cookieArray[i].split("=");
     var k=unescape(thisCookie[0]);
 
@@ -388,7 +388,7 @@ function listCookie() {
   document.writeln("<table>");
   document.writeln("<tr><th>Name<th>Value");
   cookieArray = document.cookie.split(";");
-  for (var i = 0; i < 6; i++) {
+  for (var i = 0; i < 12; i++) {
     thisCookie = cookieArray[i].split("=");
     var k=unescape(thisCookie[0]);
 
