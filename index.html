@@ -213,7 +213,7 @@ for(var x=0;x<9;){
         AAAAAA[9] >= 180 && AAAAAA[9] <=220 )
         {
             NoA=true
-            doCookieSetup(AAA,true)
+            doCookieSetup(1,1)
             $('#stamp1').append('<img id="image1" src="https://stickershop.line-scdn.net/stickershop/v1/product/14460/LINEStorePC/main.png;compress=true">')
 
         }
@@ -325,28 +325,25 @@ function doCookieSetup(name, value) {
 }
 
 function CheckCookie(){
-if (cookieArray==null){
-  
-}
-else{
-
+var cName=[0,0,0,0,0,0]
+var cValue=[0,0,0,0,0,0]
 
   cookieArray = document.cookie.split(";");
   for (var i = 0; i < cookieArray.length; i++) {
     thisCookie = cookieArray[i].split("=");
-    cName = unescape(thisCookie[0]);
-    cValue = unescape(thisCookie[1]);
+    cName[i] = unescape(thisCookie[0]);
+    cValue[i] = unescape(thisCookie[1]);
   
 
 
-if( (cName==AAA && cValue==true &&  NoA==false )){
+if( (cName[0]==1 && cValue[0]==1 &&  NoA==false )){
     NoA=true
     $('#stamp1').append('<img id="image1" src="https://stickershop.line-scdn.net/stickershop/v1/product/14460/LINEStorePC/main.png;compress=true">')
 }
 }
 
 
-}
+
 
 
 }
