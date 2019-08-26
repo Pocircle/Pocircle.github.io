@@ -325,6 +325,12 @@ function doCookieSetup(name, value) {
 }
 
 function CheckCookie(){
+if (cookieArray==null){
+  break;
+}
+else{
+
+
   cookieArray = document.cookie.split(";");
   for (var i = 0; i < cookieArray.length; i++) {
     thisCookie = cookieArray[i].split("=");
@@ -340,7 +346,7 @@ if( (cName==AAA && cValue==true &&  NoA==false )){
 }
 
 
-
+}
 
 
 }
