@@ -329,7 +329,7 @@ var cName=[0,0,0,0,0,0]
 var cValue=[0,0,0,0,0,0]
 
   cookieArray = document.cookie.split(";");
-  for (var i = 0; i < cookieArray.length; i++) {
+  for (var i = 0; i < 6; i++) {
     thisCookie = cookieArray[i].split("=");
     cName[unescape(thisCookie[0])] = unescape(thisCookie[0]);
     cValue[unescape(thisCookie[0])] = unescape(thisCookie[1]);
@@ -381,13 +381,15 @@ var cValue=[0,0,0,0,0,0]
 
 
 function listCookie() {
+  var cName=[0,0,0,0,0,0]
+  var cValue=[0,0,0,0,0,0]
   document.writeln("<table>");
   document.writeln("<tr><th>Name<th>Value");
   cookieArray = document.cookie.split(";");
   for (var i = 0; i < cookieArray.length; i++) {
     thisCookie = cookieArray[i].split("=");
-    cName = unescape(thisCookie[0]);
-    cValue = unescape(thisCookie[1]);
+    cName[unescape(thisCookie[0])] = unescape(thisCookie[0]);
+    cValue[unescape(thisCookie[0])] = unescape(thisCookie[1]);
     document.writeln("<tr><td>" + cName + "</td><td>" + cValue + "</td>");
   }
   document.writeln("</table>");
