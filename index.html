@@ -331,8 +331,10 @@ var cValue=[0,0,0,0,0,0]
   cookieArray = document.cookie.split(";");
   for (var i = 0; i < 6; i++) {           // i的數字設有幾個印章
     thisCookie = cookieArray[i].split("=");
-    cName[unescape(thisCookie[0])] = unescape(thisCookie[0]);
-    cValue[unescape(thisCookie[0])] = unescape(thisCookie[1]);
+    var k=unescape(thisCookie[0]);
+
+    cName[k] = unescape(thisCookie[0]);
+    cValue[k] = unescape(thisCookie[1]);
   
 
 
@@ -388,8 +390,10 @@ function listCookie() {
   cookieArray = document.cookie.split(";");
   for (var i = 0; i < 6; i++) {
     thisCookie = cookieArray[i].split("=");
-    cName[unescape(thisCookie[0])] = unescape(thisCookie[0]);
-    cValue[unescape(thisCookie[0])] = unescape(thisCookie[1]);
+    var k=unescape(thisCookie[0]);
+
+    cName[k] = unescape(thisCookie[0]);
+    cValue[k] = unescape(thisCookie[1]);
     document.writeln("<tr><td>" + cName + "</td><td>" + cValue + "</td>");
   }
   document.writeln("</table>");
