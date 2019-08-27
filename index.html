@@ -294,9 +294,22 @@ for(var x=0;x<9;){
             
             doCookieSetup(5,1)
             $('#stamp6').append('<img id="image6" src="https://thumbs.gfycat.com/BelovedAmpleIchthyostega-size_restricted.gif">')
-            listCookie()
+           
         }
-        
+        if(point5X >50 &&						          	//清除cookies
+        AAAAAA[0]>=687  && AAAAAA[0]<=727  && 
+        AAAAAA[1]>=687  && AAAAAA[1]<=727  && 
+        AAAAAA[2]>=480  && AAAAAA[2]<=520  &&
+        AAAAAA[3]>=480  && AAAAAA[3]<=520  &&
+        AAAAAA[4]>=480  && AAAAAA[4]<=520  &&
+        AAAAAA[5]>=480  && AAAAAA[5]<=520  &&
+        AAAAAA[6]>=404  && AAAAAA[6]<=444  &&
+        AAAAAA[7]>=340  && AAAAAA[7]<=380  &&
+        AAAAAA[8]>=340  && AAAAAA[8]<=380  &&
+        AAAAAA[9]>=262  && AAAAAA[9]<=302 ){
+
+          document.cookie = "name=; expire=Thu, 18 Dec 2013 12:00:00 GMT;";
+        }
     
     // $('#image1').offset({ top:400, left: 100 })
     // $('#image2').offset({ top:400, left: 100 })
@@ -321,7 +334,7 @@ function render() {
 function doCookieSetup(name, value) {
   var expires = new Date();
   //有效時間保存 2 天 2*24*60*60*1000
-  expires.setTime(expires.getTime() + 60000);
+  expires.setTime(expires.getTime() + 86400000);
   document.cookie = name + "=" + escape(value) + ";expires=" + expires.toGMTString()
 }
 
