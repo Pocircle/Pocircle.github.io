@@ -24,6 +24,7 @@ window.onload = function () {
         }, {
             headers: {
                 'Authorization': 'Basic MjNkZXNpZ246cjlyVThoOU1CTXJNWkFOblM1ZUpxTlla',
+                'Content-Type': 'application/json'
             }
         }).then(res => {
             _MyUrl = "https://service.12cm.com.tw/coupon/std/"+deletAll(deletAll(deleteT(res.request.response.toString(), 0, 40),"}"),'"');
