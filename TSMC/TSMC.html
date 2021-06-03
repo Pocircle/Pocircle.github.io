@@ -8,23 +8,51 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="CSS/pic.css">
+    <link rel="stylesheet" href="CSS/Dialog.css">
 </head>
 
 <body>
-    <div id="my_body" class="my_body" >
-        <div class="pic"></div>
+    <input type="checkbox" name="menu-switcher" id="menu-switcher" />
+    <label for="menu-switcher" class="hamburger">
+        <div class="hamburger-line"></div>
+    </label>
+    <ul class="menu">
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+    </ul>
+
+    <div id="my_dialog1" class="dialog1">
+        第一個HashTag
+        <div onmousedown="CloseIt1()" class="toNone">x</div>
+    </div>
+    <div id="my_dialog2" class="dialog2">
+        第二個HashTag
+        <div onmousedown="CloseIt2()" class="toNone">x</div>
+    </div>
+    <div id="my_dialog3" class="dialog3">
+        第三個HashTag
+        <div onmousedown="CloseIt3()" class="toNone">x</div>
+    </div>
+    <div id="my_dialog4" class="dialog4">
+        第四個HashTag
+        <div onmousedown="CloseIt4()" class="toNone">x</div>
+    </div>
+    <div id="my_dialog5" class="dialog5">
+        第五個HashTag
+        <div onmousedown="CloseIt5()" class="toNone">x</div>
+    </div>
+    <div id="my_body" onmousedown="OnMouseDown()" onmouseup="OnMouseUp()" class="my_body">
+        <div onmousedown="ShowXY()" class="pic"><div class="Logo"></div></div>
 
     </div>
-    <!-- <div id="my_body" class="my_body">
-        
-        <canvas id="canvas_1">
-        
-        </canvas>
+    <div>
 
-    </div> -->
-<div style="height: 50% ;  font-size: 500ch;">
-    DSFDSAFDSAFDSA
-</div>
+    </div>
+    <div style="height: 50% ;  font-size: 50ch;">
+        DSFD
+    </div>
 
 
     <script src="JS/Canvas.js"></script>

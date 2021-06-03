@@ -24,6 +24,18 @@
     background-size: 100%;
     background-repeat: no-repeat;
 }
+.Logo{
+    width: 20%;
+    height: 100vh;
+    z-index: 2000;
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    background-image: url("../pic/TSMS_element_tittle_big.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
 
 .x1 {
     background-color: rgb(255, 255, 255);
@@ -33,6 +45,7 @@
 .x2 {
     background-color: rgb(0, 0, 0);
     float: left;
+    cursor: pointer;
 }
 
 .x3 {
@@ -204,14 +217,17 @@
 .SizeX19 {
     width: 5%;
     padding-top: 5%;
-    border: rgb(168, 167, 167);
+    border-left: rgb(168, 167, 167);
+    border-top: rgb(168, 167, 167);
+    border-bottom: rgb(168, 167, 167);
+    border-right: rgb(255, 255, 255);
     border-width: 1px;
     border-style: solid;
 }
 
 .SizeY {
     padding-top: 5%;
-    border: rgb(168, 167, 167);
+    border-left: rgb(168, 167, 167);
     border-width: 1px;
     border-style: solid;
     display: inline-block;
@@ -219,70 +235,71 @@
 
 .SizeY0 {
     padding-top: 5%;
-    border: rgb(168, 167, 167);
+    border-left: rgb(168, 167, 167);
     border-width: 1px;
     border-style: solid;
 }
 
 .SizeY1 {
     padding-top: 5%;
-    border: rgb(168, 167, 167);
+    border-left: rgb(168, 167, 167);
     border-width: 1px;
     border-style: solid;
 }
 
 .SizeY2 {
     padding-top: 5%;
-    border: rgb(168, 167, 167);
+    border-left: rgb(168, 167, 167);
     border-width: 1px;
     border-style: solid;
 }
 
 .SizeY3 {
     padding-top: 5%;
-    border: rgb(168, 167, 167);
+    border-left: rgb(168, 167, 167);
     border-width: 1px;
     border-style: solid;
 }
 
 .SizeY4 {
     padding-top: 5%;
-    border: rgb(168, 167, 167);
+    border-left: rgb(168, 167, 167);
     border-width: 1px;
     border-style: solid;
 }
 
 .SizeY5 {
     padding-top: 5%;
-    border: rgb(168, 167, 167);
+    border-left: rgb(168, 167, 167);
     border-width: 1px;
     border-style: solid;
 }
 
 .SizeY6 {
     padding-top: 5%;
-    border: rgb(168, 167, 167);
+    border-left: rgb(168, 167, 167);
     border-width: 1px;
     border-style: solid;
 }
 
 .SizeY7 {
     padding-top: 5%;
-    border: rgb(168, 167, 167);
+    border-left: rgb(168, 167, 167);
     border-width: 1px;
     border-style: solid;
 }
 
 .SizeY8 {
     padding-top: 5%;
-    border: rgb(168, 167, 167);
+    border-left: rgb(168, 167, 167);
     border-width: 1px;
     border-style: solid;
 }
 
 .SizeY9 {
     padding-top: 5%;
-    border: rgb(168, 167, 167);
+    border-left: rgb(168, 167, 167);
+    border-bottom: rgb(255, 255, 255);
     border-width: 1px;
     border-style: solid;
 }

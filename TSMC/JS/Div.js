@@ -2,8 +2,21 @@ var GGX;
 var GGY;
 var W = document.documentElement.clientWidth;
 var H = ((document.body.offsetWidth + 77) / 2) + 30;
-setInterval(mouseX, 30) //一秒畫30次
-setInterval(mouseY, 30) //一秒畫30次
+var PercentX;
+var PercentY;
+var click = false;
+var Select1 = false;
+var Select2 = false;
+var Select3 = false;
+var Select4 = false;
+var Select5 = false;
+var istap1 = false;
+var istap2 = false;
+var istap3 = false;
+var istap4 = false;
+var istap5 = false;
+setInterval(mouseX, 1) //一秒畫30次
+setInterval(mouseY, 1) //一秒畫30次
 var mouse = {
     x: 0,
     y: 0
@@ -30,10 +43,15 @@ my_body.addEventListener("mousemove", function (evt) {
     } else {
         GGY = H * 10 / 11;
     }
-
-    console.log(GGY);
-    console.log(H);
+    PercentX = GGX / W * 100;
+    PercentY = GGY / H * 100;
 })
+
+function ShowXY() {
+
+    console.log("X :" + PercentX);
+    console.log("Y :" + PercentY);
+}
 
 var d1 = document.getElementById('my_body');
 for (i = 0; i < 10; i++) { //自動生成div
@@ -125,7 +143,7 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX5 SizeY1" ></div>');
                         break;
                     case 6:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX6 SizeY1" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX6 SizeY1" ><div class="hashtag1">#eFoundry</div></div>');
                         break;
                     case 7:
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX7 SizeY1" ></div>');
@@ -190,10 +208,10 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX5 SizeY2" ></div>');
                         break;
                     case 6:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX6 SizeY2" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x2 SizeX6 SizeY2" ></div>');
                         break;
                     case 7:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x2 SizeX7 SizeY2" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX7 SizeY2" ></div>');
                         break;
                     case 8:
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX8 SizeY2" ></div>');
@@ -211,7 +229,7 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX12 SizeY2" ></div>');
                         break;
                     case 13:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX13 SizeY2" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX13 SizeY2" ><div class="hashtag4">#TSMC-Online</div></div>');
                         break;
                     case 14:
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX14 SizeY2" ></div>');
@@ -276,7 +294,7 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX12 SizeY3" ></div>');
                         break;
                     case 13:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX13 SizeY3" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x2 SizeX13 SizeY3" ></div>');
                         break;
                     case 14:
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX14 SizeY3" ></div>');
@@ -382,10 +400,10 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX4 SizeY5" ></div>');
                         break;
                     case 5:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX5 SizeY5" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x3 SizeX5 SizeY5" ></div>');
                         break;
                     case 6:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX6 SizeY5" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX6 SizeY5" ><div class="hashtag2">#資訊安全</div></div>');
                         break;
                     case 7:
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX7 SizeY5" ></div>');
@@ -404,7 +422,7 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX11 SizeY5" ></div>');
                         break;
                     case 12:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x2 SizeX12 SizeY5" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX12 SizeY5" ></div>');
                         break;
                     case 13:
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX13 SizeY5" ></div>');
@@ -413,13 +431,13 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX14 SizeY5" ></div>');
                         break;
                     case 15:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX15 SizeY5" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX15 SizeY5" ><div class="hashtag5">#智慧學習</div></div>');
                         break;
                     case 16:
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX16 SizeY5" ></div>');
                         break;
                     case 17:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX17 SizeY5" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x3 SizeX17 SizeY5" ></div>');
                         break;
                     case 18:
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX18 SizeY5" ></div>');
@@ -459,7 +477,7 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX8 SizeY6" ></div>');
                         break;
                     case 9:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX9 SizeY6" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX9 SizeY6" ><div class="hashtag3">#線上服務系統</div></div>');
                         break;
 
                     case 10:
@@ -472,13 +490,13 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX12 SizeY6" ></div>');
                         break;
                     case 13:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX13 SizeY6" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x3 SizeX13 SizeY6" ></div>');
                         break;
                     case 14:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x3 SizeX14 SizeY6" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX14 SizeY6" ></div>');
                         break;
                     case 15:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX15 SizeY6" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x2 SizeX15 SizeY6" ></div>');
                         break;
                     case 16:
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX16 SizeY6" ></div>');
@@ -506,7 +524,7 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX2 SizeY7" ></div>');
                         break;
                     case 3:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX3 SizeY7" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x3 SizeX3 SizeY7" ></div>');
                         break;
                     case 4:
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX4 SizeY7" ></div>');
@@ -524,7 +542,7 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX8 SizeY7" ></div>');
                         break;
                     case 9:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX9 SizeY7" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x2 SizeX9 SizeY7" ></div>');
                         break;
 
                     case 10:
@@ -534,16 +552,16 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX11 SizeY7" ></div>');
                         break;
                     case 12:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX12 SizeY7" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x3 SizeX12 SizeY7" ></div>');
                         break;
                     case 13:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x3 SizeX13 SizeY7" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX13 SizeY7" ></div>');
                         break;
                     case 14:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX14 SizeY7" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x3 SizeX14 SizeY7" ></div>');
                         break;
                     case 15:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x2 SizeX15 SizeY7" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX15 SizeY7" ></div>');
                         break;
                     case 16:
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX16 SizeY7" ></div>');
@@ -602,10 +620,10 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX12 SizeY8" ></div>');
                         break;
                     case 13:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX13 SizeY8" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x3 SizeX13 SizeY8" ></div>');
                         break;
                     case 14:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x3 SizeX14 SizeY8" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX14 SizeY8" ></div>');
                         break;
                     case 15:
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX15 SizeY8" ></div>');
@@ -661,7 +679,7 @@ for (i = 0; i < 10; i++) { //自動生成div
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX10 SizeY9" ></div>');
                         break;
                     case 11:
-                        d1.insertAdjacentHTML('beforeend', '<div class="x2 SizeX11 SizeY9" ></div>');
+                        d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX11 SizeY9" ></div>');
                         break;
                     case 12:
                         d1.insertAdjacentHTML('beforeend', '<div class="x1 SizeX12 SizeY9" ></div>');
@@ -934,6 +952,7 @@ function mouseX() {
     }
     CountAdjustXX();
 }
+
 var SizeYName = [
     'SizeY0',
     'SizeY1',
@@ -960,18 +979,223 @@ function mouseY() {
     for (j = 0; j < 10; j++) {
         for (i = 0; i < 20; i++) {
             if (GGY >= H * (j + 1) / 11) {
-                document.getElementsByClassName(SizeYName[j])[i].style.paddingTop = ((H * 200 * (j + 1) / 121 / (GGY) * Adjust_Y  ) + "%");
+                document.getElementsByClassName(SizeYName[j])[i].style.paddingTop = ((H * 200 * (j + 1) / 121 / (GGY) * Adjust_Y) + "%");
                 // console.log("Top");
-                _LengthY.splice(j, 1, ((H * 200 * (j + 1) / 121 / (GGY) * Adjust_Y  )));
+                _LengthY.splice(j, 1, ((H * 200 * (j + 1) / 121 / (GGY) * Adjust_Y)));
             } else if (GGY < H * (j + 1) / 11) {
-                document.getElementsByClassName(SizeYName[j])[i].style.paddingTop = ((1000 * (j - 10) * H / 121 / (10 * (GGY - H)) ) + "%");
+                document.getElementsByClassName(SizeYName[j])[i].style.paddingTop = ((1000 * (j - 10) * H / 121 / (10 * (GGY - H))) + "%");
                 // console.log("Botton");
-                _LengthY.splice(j, 1, (1000 * (j - 10) * H / 121 / (10 * (GGY - H)) ));
+                _LengthY.splice(j, 1, (1000 * (j - 10) * H / 121 / (10 * (GGY - H))));
             }
         }
     }
     CountAdjustYY();
 }
+
+var CanDialog = false;
+var dia1 = document.getElementById('my_dialog1');
+var dia2 = document.getElementById('my_dialog2');
+var dia3 = document.getElementById('my_dialog3');
+var dia4 = document.getElementById('my_dialog4');
+var dia5 = document.getElementById('my_dialog5');
+my_body.addEventListener('mousemove', e => { //設定哪個點需要被觸摸有反應
+    if (PercentX > 30.20 &&
+        PercentX < 35.02 &&
+        PercentY > 21.33 &&
+        PercentY < 30.11) {
+        document.getElementsByClassName("pic")[0].style.cursor = "pointer";
+        document.getElementsByClassName("hashtag1")[0].style.display = "block";
+        CanDialog = true;
+        istap1 = true;
+
+    } else if (PercentX > 30.20 &&
+        PercentX < 35.02 &&
+        PercentY > 56.58 &&
+        PercentY < 65.51) {
+        document.getElementsByClassName("pic")[0].style.cursor = "pointer";
+        document.getElementsByClassName("hashtag2")[0].style.display = "block";
+        CanDialog = true;
+        istap2 = true;
+
+    } else if (PercentX > 44.59 &&
+        PercentX < 49.42 &&
+        PercentY > 65.51 &&
+        PercentY < 74.13) {
+        document.getElementsByClassName("pic")[0].style.cursor = "pointer";
+        document.getElementsByClassName("hashtag3")[0].style.display = "block";
+        CanDialog = true;
+        istap3 = true;
+
+    } else if (PercentX > 63.72 &&
+        PercentX < 68.50 &&
+        PercentY > 30.26 &&
+        PercentY < 39.18) {
+        document.getElementsByClassName("pic")[0].style.cursor = "pointer";
+        document.getElementsByClassName("hashtag4")[0].style.display = "block";
+        CanDialog = true;
+        istap4 = true;
+
+    } else if (PercentX > 73.21 &&
+        PercentX < 78.04 &&
+        PercentY > 56.58 &&
+        PercentY < 65.51) {
+        document.getElementsByClassName("pic")[0].style.cursor = "pointer";
+        document.getElementsByClassName("hashtag5")[0].style.display = "block";
+        CanDialog = true;
+        istap5 = true;
+
+    } else {
+        document.getElementsByClassName("pic")[0].style.cursor = "unset";
+        document.getElementsByClassName("hashtag1")[0].style.display = "none";
+        document.getElementsByClassName("hashtag2")[0].style.display = "none";
+        document.getElementsByClassName("hashtag3")[0].style.display = "none";
+        document.getElementsByClassName("hashtag4")[0].style.display = "none";
+        document.getElementsByClassName("hashtag5")[0].style.display = "none";
+        CanDialog = false;
+        // ToNone("dialog");
+    }
+
+    // document.getElementsByClassName("dialog")[0].style.top = (y - 10) + "px";
+    // document.getElementsByClassName("dialog")[0].style.left = (x - 10) + "px";
+
+
+})
+dia1.addEventListener('mouseup', e => { //在dialog上放開
+
+    click = false;
+    Select1 = false;
+})
+dia2.addEventListener('mouseup', e => { //在dialog上放開
+
+    click = false;
+    Select2 = false;
+})
+dia3.addEventListener('mouseup', e => { //在dialog上放開
+
+    click = false;
+    Select3 = false;
+})
+dia4.addEventListener('mouseup', e => { //在dialog上放開
+
+    click = false;
+    Select4 = false;
+})
+dia5.addEventListener('mouseup', e => { //在dialog上放開
+
+    click = false;
+    Select5 = false;
+})
+var isDialog = false;
+
+function OnMouseDown() { //滑鼠點
+    if (CanDialog == true) {
+        click = true;
+    }
+}
+
+function OnMouseUp() { //滑鼠放
+    click = false;
+    Select1 = false;
+    Select2 = false;
+    Select3 = false;
+    Select4 = false;
+    Select5 = false;
+    istap1 = false;
+    istap2 = false;
+    istap3 = false;
+    istap4 = false;
+    istap5 = false;
+}
+_Click();
+CheckConsle();
+
+function _Click() { //點擊到黑色區塊
+    if (click == true) {
+        if (istap1 == true) {
+            Select1 = true;
+        } else if (istap2 == true) {
+            Select2 = true;
+        } else if (istap3 == true) {
+            Select3 = true;
+        } else if (istap4 == true) {
+            Select4 = true;
+        } else if (istap5 == true) {
+            Select5 = true;
+        }
+    }
+    if (Select1 == true && isDialog == false) {
+        TurnBig("dialog1");
+        isDialog = true;
+    }
+    else if (Select2 == true && isDialog == false) {
+        TurnBig("dialog2");
+        isDialog = true;
+    }
+    else if (Select3 == true && isDialog == false) {
+        TurnBig("dialog3");
+        isDialog = true;
+    }
+    else if (Select4 == true && isDialog == false) {
+        TurnBig("dialog4");
+        isDialog = true;
+    }
+    else  if (Select5 == true && isDialog == false) {
+        TurnBig("dialog5");
+        isDialog = true;
+    }
+  
+    requestAnimationFrame(_Click);
+}
+
+function CheckConsle() { //持續Console
+     console.log(mouse.x);
+    requestAnimationFrame(CheckConsle);
+}
+
+function TurnBig(ABCDE) { //呼叫出dialog
+    document.getElementsByClassName(ABCDE)[0].style.display = "block";
+}
+
+function CloseIt1() {
+    ToNone("dialog1");
+}
+
+function CloseIt2() {
+    ToNone("dialog2");
+}
+
+function CloseIt3() {
+    ToNone("dialog3");
+}
+
+function CloseIt4() {
+    ToNone("dialog4");
+}
+
+function CloseIt5() {
+    ToNone("dialog5");
+}
+
+function ToNone(AA) { //關閉dialog
+
+    document.getElementsByClassName(AA)[0].style.display = "none";
+    isDialog = false;
+}
+
+// function Mouseondiolog() {
+
+//     console.log(isTap);
+//     dia.addEventListener('mousemove', e => {
+
+//         x = e.pageX;
+//         y = e.pageY;
+//         document.getElementsByClassName("dialog")[0].style.top = (y - 10) + "px";
+//         document.getElementsByClassName("dialog")[0].style.left = (x - 10) + "px";
+
+//         1
+//     })
+// }
+
 // function mouseOver(x)
 // {
 //     x.style.width="10%";
