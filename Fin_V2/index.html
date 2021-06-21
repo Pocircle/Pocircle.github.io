@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content="" />
+    <title>TSMC</title>
+    <meta property="og:title" content="">
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="zh_TW"/>
+
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preload stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+    <link rel="preload stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css">
+    <link rel="preload stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.5.1/dist/vuetify.min.css">
+    <link rel="preload stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.1/aos.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.5.1/dist/vuetify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.1/aos.js"></script>
+
+</head>
+<body class="">
+
+
+
+<!-- page starts here -->
+
+<!-- welcome grids -->
+<div id="my_body" class="welcome_grids">
+	<div class="scrolldown">
+		<img src="assets/images/icon-arrow-down.png" alt="">
+	</div>
+</div>
+<div class="welcome_mobile">
+	<div class="scrolldown">
+		<img src="assets/images/icon-arrow-down.png" alt="">
+	</div>
+</div>
+<div class="logo">
+	<img src="assets/images/logo-gray.png" alt="台積電30年IT/AI發展">
+</div>
+
+<div id="app" sticky-container class="app_wrap">
+	<!-- 半圓形 -->
+	<div class="foreword">
+		<h1 class="foreword_title">台積電近30年IT和AI發展</h1>
+		<p class="foreword_text">30年來，台積電智慧製造三度大變革，從2000年邁入全自動，</p>
+		<p class="foreword_text">2012年發展出整合平臺和大數據分析，到了2016年進入了智慧製造第三階段，</p>
+		<p class="foreword_text">這次大轉型不只是智慧製造生產模式的敏捷革新，更要靠AI展開全面數位轉型，擴及工作場所</p>
+		<p class="foreword_text">現代化、數位供應鏈管理、高效能雲端運算和團隊協作創新。</p>
+		<div class="foreword_from">資料來源：<span class="text-main">台灣積體電路製造股份有限公司，iThome整理</span>，2021年1月</div>
+	</div>
+	<v-app>
+		<v-main style="background-color: #ccc;">
+			<!-- 歷程 -->
+			<div class="container-left" v-sticky="stickySetting">
+				<div class="section_title">
+					<div class="section_title-num">${ section_title.id }$</div>
+					<h2>
+						<span class="section_title-sub">${ section_title.sub_title }$</span>
+						<span class="section_title-main">${ section_title.main_title }$</span>
+					</h2>
+				</div>
+				<div class="section_bg">
+					<img src="assets/images/section-bg-0.jpg" alt="" class="show">
+					<img src="assets/images/section-bg-1.jpg" alt="" :class="{ 'show':show_bg_1 }">
+					<img src="assets/images/section-bg-2.jpg" alt="" :class="{ 'show':show_bg_2 }">
+					<img src="assets/images/section-bg-3.jpg" alt="" :class="{ 'show':show_bg_3 }">
+					<img src="assets/images/section-bg-4.jpg" alt="" :class="{ 'show':show_bg_4 }">
+				</div>
+			</div>
+			<v-container class="container-center">
+				<section class="events" id="events0">
+					<div class="events_title">
+						<div class="events_title-num">${ events_titles[0].id }$</div>
+						<h2>
+							<span class="events_title-sub">${ events_titles[0].sub_title }$</span>
+							<span class="events_title-main">${ events_titles[0].main_title }$</span>
+						</h2>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">1996/07</v-col>
+							<v-col cols="12" md="9">正式提出虛擬晶圓廠願景，也於同年展開管理資訊系統升級專案計畫 — <span class="text-hover" @click="open_inline_dialog(0)">MUST計畫</span></v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">1996/09</v-col>
+							<v-col cols="12" md="9"><span class="text-hover" @click="open_inline_dialog(1)">全方位訂單管理系統</span>（Total Order Management System, TOM）上線，可提高客戶預訂流程的效率，縮短交期並提升服務品質，來實現<span class="text-main">虛擬工廠</span>的理想</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">1997/12</v-col>
+							<v-col cols="12" md="9">成立Y2K專案，旨在解決全公司業務相關軟硬體系統及生產設備範圍的Y2K年序問題</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">1997年報</v-col>
+							<v-col cols="12" md="9">組織圖首度新增資訊技術發展處</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">1999/07</v-col>
+							<v-col cols="12" md="9">推出<span class="text-hover" @click="open_inline_dialog(2)">TSMC On-Line</span>網站，全球客戶可網路下單，即時查詢晶片生產進度和出貨狀況</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2000/01/01</v-col>
+							<v-col cols="12" md="9">資訊系統及所有生產設備順利度過Y2K危機</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2000/06</v-col>
+							<v-col cols="12" md="9">推出<span class="text-main">DesignSphere Access</span>服務，可以<span class="text-main">完全透過網際網路，完成從晶片設計構思到完成晶片驗證</span>的程序</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2000/08</v-col>
+							<v-col cols="12" md="9"><span class="text-hover" @click="open_inline_dialog(3)">TSMC-Online 2.0</span>線上服務系統上線，客戶能夠互動式查詢晶圓製造相關資訊，不同客戶角色可以自訂常用功能</v-col>
+						</v-row>
+					</div>
+				</section>
+				
+					<div class="line_pair"></div>
+				<section class="events" id="events1">
+					<div class="events_title">
+						<div class="events_title-num">${ events_titles[1].id }$</div>
+						<h2>
+							<span class="events_title-sub">${ events_titles[1].sub_title }$</span>
+							<span class="events_title-main">${ events_titles[1].main_title }$</span>
+						</h2>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2000</v-col>
+							<v-col cols="12" md="9">首創的<span class="text-hover" @click="open_inline_dialog(4)">eFoundry服務理念</span>，將更多客戶服務內容延伸到網際網路，建立更即時便捷的溝通模式</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2001</v-col>
+							<v-col cols="12" md="9"><span class="text-hover" @click="open_inline_dialog(5)">林坤禧</span>資深副總兼任台積電首位資訊長</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2002</v-col>
+							<v-col cols="12" md="9">推動2項<span class="text-main">IT跨部門專案</span>，線上供應系統可<span class="text-main">整合供應商相關資訊、原物料計畫管理系統</span>可改善物料需求預測，同時也降低缺料的風險</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2002年報</v-col>
+							<v-col cols="12" md="9">揭露資訊長執掌包括資訊系統架構、電子商務策略與資訊系統發展及營運
+							<hr>
+							揭露<span class="text-hover" @click="open_inline_dialog(6)">e-foundry基本架構</span>，以網路為基礎，建立了包括設計合作、工程合作和後勤合作系統等應用系統。DocuFast可下載全套台積電技術文件，以<span class="text-main">確保製程的一致性與包容性</span>
+							</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2005年報</v-col>
+							<v-col cols="12" md="9">揭露在物料企畫及庫存管理上持續改善，透過每周資料更新及報表系統，有效地整合了資材及其它相關單位之供需資訊。2006年報揭露，<span class="text-main">超大晶圓廠達到近百分之百的全自動化生產</span></v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2008初</v-col>
+							<v-col cols="12" md="9">創立<span class="text-hover" @click="open_inline_dialog(7)">開放創新平台（Open Innovation Platform , OIP）</span>，整合台積電與合作夥伴的矽智財、設計服務與製程技術</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2008起</v-col>
+							<v-col cols="12" md="9"><span class="text-main">建立全面環保、安全與衛生管理（TSM）系統，透過網路介面整合20多套系統</span></v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2008</v-col>
+							<v-col cols="12" md="9">參考營運持續管理標準BS 25999加強營運持續程序<span class="text-note">*此管理標準後來納入資訊系統對營運的風險，成為資訊圈衡量企業對於「營運韌性」規畫是否達國際主流的指標</span></v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2009年報</v-col>
+							<v-col cols="12" md="9">揭露<span class="text-main">「EFOUNDRY」服務系統</span>。設計合作可提供客戶在每一設計階段完整準確及時的設計資訊；工程合作可提供客戶晶片良率測試及可靠度相關的工程資訊；後勤合作可每天提供三次客戶晶片在工廠封裝測試及運送的後勤資訊。</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2010年報</v-col>
+							<v-col cols="12" md="9">首度提出<span class="text-hover" @click="open_inline_dialog(8)">「精準製造」製造架構</span>，利用結合精細複雜排程、即時派工與物料自動搬運系統發展精準製造，也用先進機臺控制系統、即時缺陷偵測系統來最佳化機臺效能
+							<hr>
+							永續指標下的風險管理指標首度增列資訊系統，這些永續指標應用也用於主要供應商管理
+							</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2011</v-col>
+							<v-col cols="12" md="9">率先進入智慧化生產流程，將<span class="text-hover" @click="open_inline_dialog(9)">人工智慧導入晶圓製造</span>
+							</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2011/12</v-col>
+							<v-col cols="12" md="9"><span class="text-main">OIP合作夥伴管理門戶網站上線</span>，與生態系統夥伴們間建立商業生產上更有效的溝通管道
+							</v-col>
+						</v-row>
+					</div>
+				</section>
+				<div class="line_pair"></div>
+				<section class="events" id="events2">
+					<div class="events_title">
+						<div class="events_title-num">${ events_titles[2].id }$</div>
+						<h2>
+							<span class="events_title-sub">${ events_titles[2].sub_title }$</span>
+							<span class="events_title-main">${ events_titles[2].main_title }$</span>
+						</h2>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2011</v-col>
+							<v-col cols="12" md="9">台積電以網際網路為基礎，提供了<span class="text-hover" @click="open_inline_dialog(10)">更積極主動的設計、工程及後勤合作</span>的<span class="text-main">「EFOUNDRY」整合服務系統</span>，讓客戶可以一天24小時、一星期七天隨時掌握重要訊息，產生自訂報表</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2014年報</v-col>
+							<v-col cols="12" md="9">首度揭露<span class="text-main">更多台積電Big Data應用</span>，包括利用巨量資料的智慧化調機、大量工程資料探勘以及設備腔體匹配系統進行分析，進一步應用於機臺、製程與良率的管控。以及巨量工程資料協助決策分析的<span class="text-hover" @click="open_inline_dialog(11)">「智動化」系統</span>（Intelligent Automation System），可<span class="text-main">維持機臺高效且穩定的運轉</span>。另外也開始<span class="text-main">使用智慧化行動裝置</span>
+							<hr>
+							在風險管理項目中，首度把<span class="text-hover" @click="open_inline_dialog(12)">「網路攻擊之風險」</span>列入其他風險項目</v-col>
+						</v-row>
+					</div>
+				</section>
+				<div class="line_pair"></div>
+				<section class="events" id="events3">
+					<div class="events_title">
+						<div class="events_title-num">${ events_titles[3].id }$</div>
+						<h2>
+							<span class="events_title-sub">${ events_titles[3].sub_title }$</span>
+							<span class="events_title-main">${ events_titles[3].main_title }$</span>
+						</h2>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2015年報</v-col>
+							<v-col cols="12" md="9">首度揭露<span class="text-main">使用機器學習來優化工程效能</span>。工程巨量資料分析平臺與機器學習的技術，並利用統計製程控制、先進機臺控制、先進製程控制及晶圓測試，全面優化機臺、製程與良率。並透過工程巨量資料探勘與分析、智慧化調機和設備腔體匹配，讓智動化營運系統達到「自我診斷和自我反應」
+							<hr>
+							提出<span class="text-main">「精實與智慧生產」</span>，台積電已整合了先進資料分析、智慧診斷、自我反應引擎和生產知識等技術，把工廠的生產模式，從「自動化」革新為「智能化」</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2016年報</v-col>
+							<v-col cols="12" md="9">揭露製程管制和分析系統已整合了多個智慧功能，達成了<span class="text-hover" @click="open_inline_dialog(13)">自我診斷與自我反應</span>自我診斷與自我反應<span class="text-main">提升良率、改善流程、錯誤偵測、降低成本與縮短研發周期</span>。在工程效能最佳化上，已開發出精準即時缺陷偵測分類系統、先進智慧機臺控制和先進智慧製程控制，即時監控並準確調整製程條件。還開發出精準機臺腔體匹配和良率採礦分析，以降低製程變異和潛在良率損失。更進一步建立了<span class="text-main">大數據、機器學習和AI架構</span>，來尋找影響產品品質優劣的關鍵因素。舉辦全公司性的深度學習和機器學習培訓</span>
+							<hr>
+							提出<span class="text-hover" @click="open_inline_dialog(14)">「敏捷與智慧生產」</span>，台積電除<span class="text-main">引進IoT、智慧化行動裝置，亦引進移動式機器人</span>，來提高工廠生產效率
+							<hr>
+							在網路攻擊風險中，新納入勒索軟體攻擊風險考量</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2017</v-col>
+							<v-col cols="12" md="9">計畫內部培訓300位ML專家，打造ML平臺</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2017年報</v-col>
+							<v-col cols="12" md="9">揭露台積電集中式晶圓廠製造管理系統<span class="text-hover" @click="open_inline_dialog(15)">「超級製造平台」（SMP）</span>。為落實卓越製造的承諾，台積電更進一步將自動化生產製造系統結合機器學習技術。機器學習技術將工廠的生產模式，<span class="text-main">從「自動化」革新為「智能化」</span>，廣泛地應用在排程與派工、人員生產力、機臺生產力、製程與機臺控制、品質防禦以及機器人控制等方面，從而有效提升生產效率、彈性和品質，同時最大化成本效益，並加速全面創新。</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2018/08/05</v-col>
+							<v-col cols="12" md="9">發出<span class="text-hover" @click="open_inline_dialog(16)">電腦病毒感染事件</span>聲明，該事件導致晶圓出貨延遲及成本增加，也促使台積電強化<span class="text-main">供應鏈資安</span>、推動<span class="text-main">機臺資安標準</span></v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2018</v-col>
+							<v-col cols="12" md="9">成立風險管理工作小組，重要危機事件，針對火災、地震、資訊系統服務中斷、供應鏈中斷及水電供應中斷，新增加了資訊安全事件來進行應變演練
+							<hr>
+							<span class="text-main">TSMC-Online</span>推出<span class="text-main">全方位製造資訊報表</span>，客製化報表製作時間，也由數日縮短至五分鐘，快速滿足不同客戶對各階段製造資訊的多樣需求</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2018/10</v-col>
+							<v-col cols="12" md="9">宣布首度在開放創新平台（OIP）上提供<span class="text-hover" @click="open_inline_dialog(17)">「虛擬設計環境 」VDE</span>，讓客戶透過雲端進行晶片設計，也啟動第5個開放創新平台聯盟「雲端聯盟」，<span class="text-main">將雲端業者納入晶片設計製造生態系</span></v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2018年報</v-col>
+							<v-col cols="12" md="9">營運風險項目中首度納入「資訊技術安全之風險及管理措施」，過去將其列於一般「危害風險」</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2019</v-col>
+							<v-col cols="12" md="9">IT軟體開發策略著重在<span class="text-main">雲端應用</span>以及<span class="text-main">手機App開發</span>，軟體開發流程更從瀑布開發模式，轉為<span class="text-main">DevOps</span>和<span class="text-main">Agile</span>開發模式
+							<hr>
+							台積電TSMC-Online可提供超過1萬600個不同的技術檔案及360個製程設計套件，一年下載量超過10 萬次</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2019/03</v-col>
+							<v-col cols="12" md="9">TSMC-Online新增晶圓指令功能:客戶可以線上預約晶圓生產批號，在線上下達生產指令，經台積電確認即下達指令完成、開始製造，減少因時區差異衍生的客戶等待或溝通時間</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2019/07</v-col>
+							<v-col cols="12" md="9">成立<span class="text-main">供應商資訊安全協會</span>，亦定期發布供應商資安電子報，溝通資安規範</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2019年報</v-col>
+							<v-col cols="12" md="9"><span class="text-hover" @click="open_inline_dialog(18)">「致股東報告書」</span>說明致力於持續強化業務的基本體質，包括了增強資訊架構和資安
+							<hr>
+							揭露<span class="text-main">智慧製造技術（AI、ML、專家系統、先進演算法）</span>，廣泛用於排程與派工、人員生產力、機臺生產力、製程與機臺控制、品質防禦、以及機器人控制。也整合智慧化行動裝置、IoT和移動式機器人，來結合智慧自動物料搬運系統，以強化晶圓生產資料收集與分析
+							<hr>
+							在<span class="text-main">資訊技術安全之風險及管理措施</span>上，揭露更多<span class="text-main">資安改進措施</span>，例如建置機臺自動化掃毒及防毒系統；強化網路防火牆與網路控管防止病毒跨機臺及跨廠區擴散；依電腦類型建置端點防毒措施；開發及部署資安監控程式；加強電腦弱點掃描及軟體更新；加強釣魚郵件偵測及員工辨識能力測試；委託外部專家執行資安評鑑；建立一個整合的自動化資安維運平臺</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2020中</v-col>
+							<v-col cols="12" md="9">展開<span class="text-main">5G企業內網規畫與部建</span></v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear">2020/12</v-col>
+							<v-col cols="12" md="9"><span class="text-main">台積電IT首次線上大規模徵才</span>，招募海內外IT業界人才</v-col>
+						</v-row>
+					</div>
+				</section>
+				<div class="line_pair"></div>
+				<section class="events" id="events4">
+					<div class="events_title">
+						<div class="events_title-num">${ events_titles[4].id }$</div>
+						<h2>
+							<span class="events_title-sub">${ events_titles[4].sub_title }$</span>
+							<span class="events_title-main">${ events_titles[4].main_title }$</span>
+						</h2>
+					</div>
+					<p class="px-4">2020年12月揭露幾個【數位轉型重要發展領域】：用AI、大數據及尖端數位科技來打造智慧製造（如智能調機及機臺邊緣運算）、數位供應鏈管理、高效能混合雲端運算及服務（將適合業務上雲，如雲端CRM和雲端HCM）、工作場所現代化（如內部行動App、RPA、智能會議室等）、團隊協作（如AR/MR遠端協作、使用者為中心的團隊協作合作平臺）</p>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear-big"><span>TSMC內部雲端軟體開發平臺</span></v-col>
+							<v-col cols="12" md="9"><h4>TSMC內部雲端軟體開發平臺</h4>整合DevOps流程和工具，支援上千名工程師開發。多數應用程式已經轉移到Kubernetes環境，也採用微服務架構來設計軟體系統。揭露下一代智慧工廠發展策略，要結合行動應用、MR、IoT、	大數據和AI來發展下一代AI工廠</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear-big"><span>台積AI和ML四大應用布局</span></v-col>
+							<v-col cols="12" md="9"><h4>台積AI和ML四大應用布局</h4>製程研發面：用AI協助理解高複雜高維度的製程開發挑戰。Fab量產面：用AI和ML分析感測資料和檢測影像，來進行品質檢驗、缺陷檢查，協助快速產生高品質的晶圓。業務面：市場動態分析大	量使用AI，也用來分析顧客行為模式。IT維運：利用AI協助IT內部複雜系統的維運，異常偵測等</v-col>
+						</v-row>
+					</div>
+					<div class="item">
+						<v-row class="item_row">
+							<v-col cols="12" md="3" class="eventYear-big"><span>IT基礎架構團隊三大工作重心</span></v-col>
+							<v-col cols="12" md="9"><h4>IT基礎架構團隊三大工作重心</h4>運用各種基礎架構新技術（完整行動應用、導入協同合作和線上會議服務、雲端服務整合利用）協助企業數位轉型，資料中心透過軟體定義（虛擬化、容器化、基礎架構程式化）轉型成真正的私	有雲、基礎架構持續創新（導入新世代5G、IoT製造、AIOps技術）</v-col>
+						</v-row>
+					</div>
+				</section>
+			</v-container>
+			<div :class="['container-right', {'show': now_scroll > 1800}]">
+				<img src="assets/images/logo-white.png" alt="">
+			</div>
+		</v-main>
+		<template>
+			<v-row justify="center">
+				<v-dialog v-model="dialog" fullscreen hide-overlay>
+					<v-card>
+						<div class="dialogs" :style="'background-color:'+hashtags[now_hashtag].color">
+							<v-card-title class="dialog-padding">
+								<span class="dialogs_title">${ hashtags[now_hashtag].title }$</span>
+							</v-card-title>
+							<div class="dialogs_content">
+								<button @click="dialog = false" class="close"></button>
+								<div class="dialogs_content-left">
+									<!-- hashtag1 -->
+									<section class="px-4 px-md-16" v-if="now_hashtag == 1">
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2000</v-col>
+												<v-col cols="12" md="8">首創的<span class="text-gray4 font-weight-medium">eFoundry</span>服務理念，將更多客戶服務內容延伸到網際網路，建立更即時便捷的溝通模式</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2002年報</v-col>
+												<v-col cols="12" md="8">揭露<span class="text-gray4 font-weight-medium">eFoundry</span>基本架構，以網路為基礎，建立了包括設計合作、工程合作和後勤合作系統等應用系統。DocuFast可下載全套台積電技術文件，以確保製程的一致性與包容性</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2009年報</v-col>
+												<v-col cols="12" md="8">揭露<span class="text-gray4 font-weight-medium">eFoundry</span>服務系統。設計合作可提供客戶在每一設計階段完整準確及時的設計資訊；工程合作可提供客戶晶片良率測試及可靠度相關的工程資訊；後勤合作可每天提供三次客戶晶片在工廠封裝測試及運送的後勤資訊。</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2011年報</v-col>
+												<v-col cols="12" md="8">台積電以網際網路為基礎，提供了更積極主動的設計、工程及後勤合作的<span class="text-gray4 font-weight-medium">eFoundry</span>整合服務系統，讓客戶可以一天24小時、一星期七天隨時掌握重要訊息，產生自訂報表</v-col>
+											</v-row>
+										</div>
+									</section>
+									<!-- hashtag2 -->
+									<section class="px-4 px-md-16" v-if="now_hashtag == 2">
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">1999/07</v-col>
+												<v-col cols="12" md="8">推出 <span class="text-brown font-weight-medium">TSMC-Online</span>網站 ，全球客戶可網路下單，即時查詢晶片生產進度和出貨狀況</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2000/08</v-col>
+												<v-col cols="12" md="8"><span class="text-brown font-weight-medium">TSMC-Online 2.0</span>線上服務系統上線，客戶能夠互動式查詢晶圓製造相關資訊，不同客戶角色可以自訂常用功能</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2018</v-col>
+												<v-col cols="12" md="8"><span class="text-brown font-weight-medium">TSMC-Online</span>推出全方位製造資訊報表，客製化報表製作時間，也由數日縮短至五分鐘，快速滿足不同客戶對各階段製造資訊的多樣需求</v-col>
+											</v-row>
+										</div>
+									</section>
+									<!-- hashtag3 -->
+									<section class="px-4 px-md-16" v-if="now_hashtag == 3">
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2014年報</v-col>
+												<v-col cols="12" md="8">在<span class="text-red font-weight-medium">風險管理</span>項目中，首度把<span class="text-red font-weight-medium">「網路攻擊之風險」</span>列入其他風險項目</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2018/08/05</v-col>
+												<v-col cols="12" md="8">發出<span class="text-red font-weight-medium">電腦病毒感染事件聲明</span>，該事件導致晶圓出貨延遲及成本增加，也促使台積電強化<span class="text-red font-weight-medium">供應鏈資安、推動機臺資安標準</span></v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2019/07</v-col>
+												<v-col cols="12" md="8">成立<span class="text-red font-weight-medium">供應商資訊安全協會</span>，亦定期發布供應商資安電子報，溝通<span class="text-red font-weight-medium">資安規範</span></v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2019年報</v-col>
+												<v-col cols="12" md="8">「致股東報告書」說明致力於持續強化業務的基本體質，包括了<span class="text-red font-weight-medium">增強資訊架構和資安</span>。</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2019年報</v-col>
+												<v-col cols="12" md="8">在<span class="text-red font-weight-medium">資訊技術安全之風險及管理措施</span>上，揭露更多資安改進措施，例如建置機臺自動化掃毒及防毒系統；強化網路防火牆與網路控管防止病毒跨機臺及跨廠區擴散；依電腦類型建置端點防毒措施；開發及部署資安監控程式；加強電腦弱點掃描及軟體更新；加強釣魚郵件偵測及員工辨識能力測試；委託外部專家執行資安評鑑；建立一個整合的<span class="text-red font-weight-medium">自動化資安維運平臺</span></v-col>
+											</v-row>
+										</div>
+									</section>
+									<!-- hashtag4 -->
+									<section class="px-4 px-md-16" v-if="now_hashtag == 4">
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">1996/07</v-col>
+												<v-col cols="12" md="8">正式提出<span class="text-olive font-weight-medium">虛擬晶圓廠願景</span>，也於同年展開管理資訊系統升級專案計畫（<span class="text-olive font-weight-medium">MUST計畫</span>）</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">1996/09</v-col>
+												<v-col cols="12" md="8"><span class="text-olive font-weight-medium">全方位訂單管理系統</span>（Total Order Management System, TOM）上線，可提高客戶預訂流程的效率，縮短交期並提升服務品質，來實現虛擬工廠的理想</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">1999/07</v-col>
+												<v-col cols="12" md="8">推出<span class="text-olive font-weight-medium">TSMC On-Line網站</span>，全球客戶可網路下單，即時查詢晶片生產進度和出貨狀況</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2000/08</v-col>
+												<v-col cols="12" md="8"><span class="text-olive font-weight-medium">TSMC-Online 2.0</span>線上服務系統上線，客戶能夠互動式查詢晶圓製造相關資訊，不同客戶角色可以自訂常用功能</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2000</v-col>
+												<v-col cols="12" md="8">首創的<span class="text-olive font-weight-medium">eFoundry服務理念</span>，將更多<span class="text-olive font-weight-medium">客戶服務內容延伸到網際網路</span>，建立更即時便捷的溝通模式</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2008初</v-col>
+												<v-col cols="12" md="8">創立<span class="text-olive font-weight-medium">開放創新平台（Open Innovation Platform , OIP）</span>，整合台積電與合作夥伴的矽智財、設計服務與製程技術</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2009年報</v-col>
+												<v-col cols="12" md="8">揭露<span class="text-olive font-weight-medium">「EFOUNDRY」服務系統</span>。設計合作可提供客戶在每一設計階段完整準確及時的設計資訊；工程合作可提供客戶晶片良率測試及可靠度相關的工程資訊；後勤合作可每天提供三次客戶晶片在工廠封裝測試及運送的後勤資訊。</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2011/12</v-col>
+												<v-col cols="12" md="8"><span class="text-olive font-weight-medium">OIP合作夥伴管理門戶網站上線</span>，與生態系統夥伴們間建立商業生產上更有效的溝通管道</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2011年報</v-col>
+												<v-col cols="12" md="8">台積電以網際網路為基礎，提供了<span class="text-olive font-weight-medium">更積極主動的設計、工程及後勤合作</span>的<span class="text-olive font-weight-medium">「EFOUNDRY」整合服務系統</span>，讓客戶可以一天24小時、一星期七天隨時掌握重要訊息，產生自訂報表</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2017年報</v-col>
+												<v-col cols="12" md="8">揭露台積電集中式晶圓廠製造管理系統<span class="text-olive font-weight-medium">「超級製造平台」（SMP）</span>。為落實卓越製造的承諾，台積電更進一步將<span class="text-olive font-weight-medium">自動化生產製造系統結合機器學習技術</span>。機器學習技術將工廠的生產模式，從「自動化」革新為「智能化」，廣泛地應用在排程與派工、人員生產力、機臺生產力、製程與機臺控制、品質防禦以及機器人控制等方面，從而有效提升生產效率、彈性和品質，同時最大化成本效益，並加速全面創新</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2018/10</v-col>
+												<v-col cols="12" md="8">宣布首度<span class="text-olive font-weight-medium">在開放創新平台（OIP）上提供「虛擬設計環境 」VDE</span>，讓客戶透過雲端進行晶片設計，也啟動第5個開放創新平台聯盟「雲端聯盟」，將雲端業者納入晶片設計製造生態系</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2019</v-col>
+												<v-col cols="12" md="8">IT軟體開發策略著重在<span class="text-olive font-weight-medium">雲端應用</span>，以及<span class="text-olive font-weight-medium">手機App開發</span>，軟體開發流程更從瀑布開發模式，轉為<span class="text-olive font-weight-medium">DevOps</span>和<span class="text-olive font-weight-medium">Agile</span>開發模式</v-col>
+											</v-row>
+										</div>
+									</section>
+									<!-- hashtag5 -->
+									<section class="px-4 px-md-16" v-if="now_hashtag == 5">
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2011</v-col>
+												<v-col cols="12" md="8">率先進入智慧化生產流程，<span class="text-green font-weight-medium">將人工智慧導入晶圓製造</span></v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2014年報</v-col>
+												<v-col cols="12" md="8">首度揭露更多台積電<span class="text-green font-weight-medium">Big Data應用</span>，包括利用巨量資料的智慧化調機、大量工程資料探勘以及設備腔體匹配系統進行分析，進一步應用於機臺、製程與良率的管控。以及巨量工程資料協助決策分析的<span class="text-green font-weight-medium">「智動化」系統（Intelligent Automation System）</span>，可維持機臺高效且穩定的運轉。另外也<span class="text-green font-weight-medium">開始使用智慧化行動裝置</span></v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2015年報</v-col>
+												<v-col cols="12" md="8">首度揭露<span class="text-green font-weight-medium">使用機器學習來優化工程效能</span>。工程巨量資料分析平臺與機器學習的技術，並利用統計製程控制、先進機臺控制、先進製程控制及晶圓測試，全面優化機臺、製程與良率。並透過工程巨量資料探勘與分析、智慧化調機和設備腔體匹配，<span class="text-green font-weight-medium">讓智動化營運系統達到「自我診斷和自我反應」</span>
+												<hr>
+												提出<span class="text-green font-weight-medium">「精實與智慧生產」</span>，台積電已整合了先進資料分析、智慧診斷、自我反應引擎和生產知識等技術，把工廠的生產模式，<span class="text-green font-weight-medium">從「自動化」革新為「智能化」</span></v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2016年報</v-col>
+												<v-col cols="12" md="8">揭露製程管制和分析系統已<span class="text-green font-weight-medium">整合了多個智慧功能，達成了自我診斷與自我反應</span>，來提升良率、改善流程、錯誤偵測、降低成本與縮短研發周期。在工程效能最佳化上，已開發出精準即時缺陷偵測分類系統、先進智慧機臺控制和先進智慧製程控制，即時監控並準確調整製程條件。還開發出精準機臺腔體匹配和良率採礦分析，以降低製程變異和潛在良率損失。更進一步建立了<span class="text-green font-weight-medium">大數據、機器學習和AI架構</span>，來尋找影響產品品質優劣的關鍵因素。舉辦全公司性的深度學習和機器學習培訓
+												<hr>
+												提出<span class="text-green font-weight-medium">「敏捷與智慧生產」</span>，台積電除<span class="text-green font-weight-medium">引進IoT、智慧化行動裝置</span>，亦<span class="text-green font-weight-medium">引進移動式機器人</span>，來提高工廠生產效率</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2017年報</v-col>
+												<v-col cols="12" md="8">揭露台積電集中式晶圓廠製造管理系統<span class="text-green font-weight-medium">「超級製造平台」（SMP）。</span>為落實卓越製造的承諾，台積電更進一步將自動化生產製造系統結合機器學習技術。機器學習技術將工廠的生產模式，從「自動化」革新為「智能化」，廣泛地應用在排程與派工、人員生產力、機臺生產力、製程與機臺控制、品質防禦以及機器人控制等方面，從而有效提升生產效率、彈性和品質，同時最大化成本效益，並加速全面創新。</v-col>
+											</v-row>
+										</div>
+										<div class="item">
+											<v-row class="item_row">
+												<v-col cols="12" md="4" class="eventYear pb-0">2019年報</v-col>
+												<v-col cols="12" md="8">揭露<span class="text-green font-weight-medium">智慧製造技術（AI、ML、專家系統、先進演算法）</span>，廣泛用於排程與派工、人員生產力、機臺生產力、製程與機臺控制、品質防禦、以及機器人控制。也整合智慧化行動裝置、IoT和移動式機器人，來結合智慧自動物料搬運系統，以強化晶圓生產資料收集與分析</v-col>
+											</v-row>
+										</div>
+									</section>
+								</div>
+								<div class="dialogs_content-right">
+									<ul class="list">
+										<li :class="['item', {'active': now_hashtag == hashtag.id}]" 
+											v-for="hashtag in dialog_right_hashtags" @click="now_hashtag = hashtag.id">
+											${ hashtag.title }$
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</v-card>
+				</v-dialog>
+			</v-row>
+		</template>
+		<template>
+			<v-dialog v-model="inline_dialog" width="500">
+				<v-card>
+					<div class="inlineDialog">
+						<v-card-title class="inlineDialog_close">
+							<button @click="inline_dialog = false" class="close"></button>
+						</v-card-title>
+						<div class="inlineDialog_content-wrap">
+							<h5 class="inlineDialog_title">${ now_inline_dialog.title }$</h5>
+							<img :src="now_inline_dialog.img" class="inlineDialog_img" v-if="now_inline_dialog.img">
+							<p class="inlineDialog_content" v-if="now_inline_dialog.content">${ now_inline_dialog.content }$</p>
+							<div class="text-right">
+								<a :href="now_inline_dialog.link" class="inlineDialog_link" v-if="now_inline_dialog.link" target="_blank">完整資料</a>
+							</div>
+						</div>
+					</div>
+				</v-card>
+			</v-dialog>
+
+		</template>
+		<div class="scrolltop" v-if="now_scroll > 1800"
+			v-scroll-to="{ el: '#my_body', offset: 0, easing: 'linear' }">
+			<img src="assets/images/icon-goToTop.png" alt="">
+		</div>
+		<div class="timeline">
+			<img src="assets/images/time-line.png" alt="">
+			<div class="timeline_dots">
+				<span class="item" v-scroll-to="{ el: '#events0', offset: 0, easing: 'linear' }"></span>
+				<span class="item" v-scroll-to="{ el: '#events1', offset: 0, easing: 'linear' }"></span>
+				<span class="item" v-scroll-to="{ el: '#events2', offset: 0, easing: 'linear' }"></span>
+				<span class="item" v-scroll-to="{ el: '#events3', offset: 0, easing: 'linear' }"></span>
+				<span class="item" v-scroll-to="{ el: '#events4', offset: 0, easing: 'linear' }"></span>
+			</div>
+		</div>
+		<div :class="['menu',{'open': open_menu}]" id="menu">
+    <div class="menu_share" @mouseover="openMenu"></div>
+    <ul class="share" @mouseleave="closeMenu">
+        <li class="item share_fb" @click="shere_facebook"></li>
+        <li class="item share_line" @click="shere_line"></li>
+    </ul>
+    <div class="hamburger" @click="openMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="nav">
+        <div class="nav_close">
+            <div class="close" @click="closeMenu"></div>
+        </div>
+        <div class="nav_top">
+            <ul class="nav_top-list">
+                <li class="item" @click="closeMenu"
+                    v-scroll-to="{ el: '#events0', offset: 0, easing: 'linear' }">
+                    <span class="num">0</span>智慧製造之前
+                </li>
+                <li class="item" @click="closeMenu"
+                    v-scroll-to="{ el: '#events1', offset: 0, easing: 'linear' }">
+                    <span class="num">1</span>智慧製造第一階段
+                </li>
+                <li class="item" @click="closeMenu"
+                    v-scroll-to="{ el: '#events2', offset: 0, easing: 'linear' }">
+                    <span class="num">2</span>智慧製造第二階段
+                </li>
+                <li class="item" @click="closeMenu"
+                    v-scroll-to="{ el: '#events3', offset: 0, easing: 'linear' }">
+                    <span class="num">3</span>智慧製造第三階段
+                </li>
+                <li class="item" @click="closeMenu"
+                    v-scroll-to="{ el: '#events4', offset: 0, easing: 'linear' }">
+                    <span class="num">4</span>未來發展
+                </li>
+            </ul>
+        </div>
+        <div class="nav_bottom">
+            <ul class="nav_bottom-list">
+                <li class="item" @click="menu_open_hashtag(1)">#eFoundry</li>
+                <li class="item" @click="menu_open_hashtag(2)">#TSMC-Online</li>
+                <li class="item" @click="menu_open_hashtag(3)">#資訊安全</li>
+                <li class="item" @click="menu_open_hashtag(4)">#線上服務系統</li>
+                <li class="item" @click="menu_open_hashtag(5)">#智慧學習</li>
+            </ul>
+            <div class="social">
+                <div class="social_line" @click="shere_line"></div>
+                <div class="social_fb" @click="shere_facebook"></div>
+            </div>
+        </div>
+    </nav>
+</div>
+	</v-app>
+	
+</div>
+
+
+
+
+<!-- FB SDK -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v6.0"></script>
+
+<!-- Line SDK -->
+<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer">
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/Div.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-sticky-directive@0.0.10/vue-sticky-directive.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
+<script>
+	$('#menu').on('click',function(){
+		console.log('click')
+		$(this).toggleClass('open');
+	})
+    new Vue({
+		el: '#app',
+		vuetify: new Vuetify(),
+		data() {
+			return {
+				stickySetting: {
+					top: true,
+					sticked: true
+				},
+				dialog: false,
+				open_menu: false,
+				hashtags: [
+					{
+						id: 0,
+						title: 'default',
+						color: '#fff'
+					},
+					{
+						id: 1,
+						title: '#eFoundry',
+						color: '#474C3A'
+					},
+					{
+						id: 2,
+						title: '#TSMC-Online線上服務系統',
+						color: '#A6826A'
+					},
+					{
+						id: 3,
+						title: '#資訊安全',
+						color: '#D66A6B'
+					},
+					{
+						id: 4,
+						title: '#線上服務系統/平台',
+						color: '#A69462'
+					},
+					{
+						id: 5,
+						title: '#智慧學習',
+						color: '#2C913F'
+					},
+				],
+				now_hashtag: 1,
+				events_titles: [
+					{
+						id: 0,
+						main_title: '虛擬工廠的理想',
+						sub_title: '智慧製造之前：'
+					},
+					{
+						id: 1,
+						main_title: '從半自動邁向生產自動化',
+						sub_title: '智慧製造 第一階段'
+					},
+					{
+						id: 2,
+						main_title: '發展整合平臺/導入大數據分析',
+						sub_title: '智慧製造 第二階段'
+					},
+					{
+						id: 3,
+						main_title: '數位科技結合機器學習/AI全面驅動數位轉型',
+						sub_title: '智慧製造 第三階段'
+					},
+					{
+						id: 4,
+						main_title: '數位轉型/AI應用/內部雲端開發平臺',
+						sub_title: '未來發展'
+					}
+				],
+				now_scroll: 0,
+				section_title: {
+					id: 0,
+					main_title: '',
+					sub_title: ''
+				},
+				show_bg_1: false,
+				show_bg_2: false,
+				show_bg_3: false,
+				show_bg_4: false,
+				inline_dialog: false,
+				now_inline_dialog: {},
+				inline_dialog_data: [
+					{
+						id: 0,
+						title: 'MUST計畫',
+						content: '「管理資訊系統升級專案計畫」(MIS Upgraded System for TSMC，簡稱MUST計畫)剛開始進行。MUST計畫的目標在於強力有效的整合該公司各項後勤資援及財務管理等系統，並即時轉換成各項管理資訊，以增進該公司的決策品質與執行效率。憑藉以上種種努力，將更加鞏固該公司在專業積體電路製造服務業中的領導地位。',
+						link: 'https://pr.tsmc.com/chinese/news/2449'
+					},
+					{
+						id: 1,
+						title: '全方位訂單管理系統',
+						content: '「全方位訂單管理系統」(Total Order Management System, TOM)，不但便利客戶下單，同時也強化內部作業效率，更可縮短交貨期，大幅提升服務水準，將再創專業積體電路製造服務業的嶄新紀元。',
+						link: 'https://pr.tsmc.com/chinese/news/2449'
+					},
+					{
+						id: 2,
+						title: 'TSMC-Online',
+						content: '台積公司透過「TSMC-Online」系統提供主動的設計、 工程及後勤整合服務，讓客戶可以一天 24 小時、一星期七天隨時掌握重要訊息，並且依據客戶的管理重點與需求產生客製化報表，提高客戶晶圓管理效率。透過 TSMCOnline，如同在自己工廠一樣，客戶能即時 掌控、管理完整的產品製造訊息。台積公司 以網際網路為基礎，透明且完整地提供客戶 所有晶圓製造相關服務，協助客戶產品成功。',
+						link: 'https://esg.tsmc.com/download/csr/2018_tsmc_csr_report_published_May_2019/chinese/pdf/c_CSR2018_ch2_4.pdf'
+					},
+					{
+						id: 3,
+						title: 'TSMC-Online 2.0',
+						content: '新一代的網際網路客戶服務系統TSMC-Online 2.0，提供流暢的「個人化」網頁運作環境，讓客戶能以即時、互動的方式進行電子商務、工程合作、專案管理等，其中One-Stop Tape-Out Service提供客戶在產品設計完成後，所需交付台積公司製作產品之規格，均可透過網路作業來完成，同時主動提供客戶即時的作業進度報告，進而有效加速產品製造前置作業之時程。',
+						link: 'https://pr.tsmc.com/chinese/news/2589'
+					},
+					{
+						id: 4,
+						title: 'eFoundry服務理念',
+						content: '網際專業積體電路製造服務。後來台積電用EFOUNDRY來稱呼這個理念所建立的平臺和服務。'
+					},
+					{
+						id: 5,
+						title: '林坤禧',
+						img: 'assets/images/dialog-5.jpg'
+					},
+					{
+						id: 6,
+						title: 'e-foundry基本架構',
+						link: 'https://www.tsmc.com/chinese/dedicatedFoundry/services/eFoundry',
+						img: 'assets/images/dialog-6.png'
+					},
+					{
+						id: 7,
+						title: '開放創新平台',
+						content: '台積公司不與客戶競爭，而是成為協助他們實現創新的合作夥伴。開放創新平台（Open Innovation Platform®, OIP）是一個完整的設計技術架構，涵蓋所有關鍵性的積體電路設計範疇，有效降低設計時可能遇到的種種障礙，提高首次投片即成功的機會。「開放創新平台」結合半導體設計產業、台積公司設計生態系統合作夥伴、台積公司的矽智財（IP）、設計應用、可製造性設計服務、製程技術以及後段封裝測試服務，帶來最具時效的創新。至今已有超過1萬2,000個元件矽智財與資料庫。目前在TSMC-Online上，提供超過8,200個技術檔案及超過270個製程設計套件，民國105年客戶下載使用技術檔案與製程設計套件已超過10萬次。民國105年9月，台積公司在美國加州聖荷西會議中心及同年10月於中國北京陸續主辦OIP生態系統論壇，由來自台積公司及夥伴公司的高階主管擔任主講人，討論最新世代技術發展，展現經由OIP共同合作的創新成果。',
+						link: 'https://esg.tsmc.com/csr/ch/update/innovationAndService/caseStudy/1/index.html'
+					},
+					{
+						id: 8,
+						title: '「精準製造」製造架構',
+						content: '台積公司獨有的製造架構，是為擁有多樣產品組合的專 業積體電路製造服務所量身打造的。為了落實卓越製造 的承諾，台積公司發展出最精細複雜的排程、領先業界 的即時派工、全自動化生產，應用物料自動搬運系統與 智慧化行動裝置，而且不斷改善並簡化生產流程（Lean Manufacturing），提供客戶準時交貨與最佳生產週期。 台積公司透過即時監控、分析與診斷機台生產力，能將生 產的干擾降到最低，並獲得最佳的成本效益。',
+						link: 'https://investor.tsmc.com/static/annualReports/2014/chinese/pdf/c_11_1.pdf'
+					},
+					{
+						id: 9,
+						title: '人工智慧導入晶圓製造',
+						content: '開始智慧化歷程，導入整合式IT及大數據分析與應用',
+						link: 'https://www.cw.com.tw/article/5093674?template=transformers'
+					},
+					{
+						id: 10,
+						title: '更積極主動的設計、工程及後勤合作',
+						content: '設計合作上可以提供每一設計階段準確與最新的設計資訊，工程合作上則可提供客戶晶片良率測試及可靠度相關的工程資訊，而後勤合作可以做到一天提供3次，客戶晶片在工廠封裝測試及運送的多項後勤資訊。',
+						link: 'https://www.ithome.com.tw/news/142462'
+					},
+					{
+						id: 11,
+						title: '「智動化」系統',
+						content: '在每一個製程步驟所建立的精準模型與控制，能驅動智 慧模組化迴路控制。這種製程控制方法，可以透過最先 進的電腦整合製造系統派工，達到機台與產品的最佳表 現，同時也能在高度複雜的半導體生產環境中，展現精準 製造的實力。',
+						link: 'https://investor.tsmc.com/static/annualReports/2014/chinese/pdf/c_11_1.pdf'
+					},
+					{
+						id: 12,
+						title: '「網路攻擊之風險」',
+						content: '台積公司建立了一套完整的網路及電腦安全防護系統以 控管或維持公司的製造營運及會計等重要企業運作的功 能，但無法保證我們的電腦系統能完全避免由第三方發 起可能會造成系統癱瘓的網路病毒的攻擊。這些網路攻 擊以非法方式入侵我們的內部網路系統，進行破壞公司 之營運或損及公司商譽之活動。在遭受嚴重網路攻擊的 情況下，台積公司的系統可能會失去公司重要的資料，生 產線也可能因受攻擊的問題未解決而無限期停擺。網路 攻擊也可能企圖竊取公司的營業祕密、其他智慧財產及 機密資訊，例如員工個資以及客戶或其他利害關係人的 專有資訊。惡意的駭客亦能試圖將電腦病毒或破壞性軟 體導入台積公司的網路系統，以干擾公司的營運或窺探 機密資訊。這些攻擊可能導致公司因延誤或中斷訂單而 需賠償客戶的損失，或需擔負龐大的費用以重建安全防 護系統。若無法及時解決這些網路攻擊造成的困難的技 術性問題，皆可能嚴重影響台積公司的財務表現及對客 戶和其他利害關係人的承諾。',
+						link: '缺'
+					},
+					{
+						id: 13,
+						title: '自我診斷與自我反應',
+						content: '隨著先進製程發展，線寬持續微縮，更嚴格的製程管制已成為製造上的一大挑戰。台積公司獨有的製造架構，是為嚴格的製程管制和多樣化產品組合所量身訂作，以滿足產品高效能的需求。為達到機器、製程與良率的全面最佳化，製程管制和分析系統已整合了多個智慧功能，達成了自我診斷（self-diagnosis）與自我反應（self-reacting），在提升良率、改善流程、錯誤偵測、降低成本與縮短研發週期方面，均成效卓著。'
+					},
+					{
+						id: 14,
+						title: '「敏捷與智慧生產」',
+						content: '台積公司憑著敏捷與智慧生產，持續推動卓越製造。台積公司的敏捷製造整合了供需模型、精實的在製品管理、派工與排程，和準時交貨系統，以提供較短的製程週期、穩定的生產，和準時交貨。這套系統也提供了高度彈性，以快速支援客戶的緊急需求。台積公司也引進物聯網、智慧化行動裝置和移動式機器人。這些新的應用強化了資料收集、良率追踪、流程效率和物料傳送，以持續精進工廠的生產效率。為落實卓越製造的承諾，台積公司已整合了先進資料分析、智慧診斷、自我反應、精準預測和生產知識等技術，把工廠的生產模式，從「自動化」革新為「智能化」，以優化生產效率、彈性和品質，最大化成本效益，並加速全面創新。'
+					},
+					{
+						id: 15,
+						title: '「超級製造平台」',
+						content: '台積公司的超級製造平台（Super Manufacturing Platform, SMP），除了能讓客戶得到更一致的品質與可靠度，還能享有更大的產能彈性、縮短良率學習曲線與量產時間，以及較低成本的產品重新認證所需要的流程。',
+						link: 'https://investor.tsmc.com/static/annualReports/2016/chinese/c_5_3.html'
+					},
+					{
+						id: 16,
+						title: '電腦病毒感染事件',
+						content: '台積公司於2018年8月3日傍晚受到電腦病毒感染，影響台灣廠區部分電腦系統及廠房機台。此次病毒感染的原因為新機台在安裝軟體的過程中操作失誤，因此病毒在新機台連接到公司內部電腦網路時發生病毒擴散的情況。惟台積公司資料的完整性和機密資訊皆未受到影響，台積公司已採取措施彌補此安全問題，同時將進一步加強資訊安全措施。',
+						link: 'https://pr.tsmc.com/chinese/news/1969'
+					},
+					{
+						id: 17,
+						title: '「虛擬設計環境 」VDE',
+						content: '台積體電首度在開放創新平台（Open Innovation Platform®, OIP）上提供「虛擬設計環境 」（Virtual Design Environment, VDE） ，協助客戶靈活運用雲端運算環境，充分使用台積公司的OIP設計基礎建設，安全地在雲端進行晶片設計。OIP VDE是台積公司與OIP設計生態環境夥伴，以及領先的雲端服務公司合作的成果，旨在雲端中提供一個完整的系統晶片設計環境。',
+						link: 'https://pr.tsmc.com/chinese/news/1973'
+					},
+					{
+						id: 18,
+						title: '「致股東報告書」',
+						link: 'https://investor.tsmc.com/static/annualReports/2019/chinese/index.html'
+					},
+				]
+			}
+		},
+		mounted() {
+			let that = this;
+			$('[data-id="hashtags"]').on('click',function(){
+				that.dialog = true;
+			})
+			$('#hashtag1').on('click',function(){
+				that.now_hashtag = 1;
+			})
+			$('#hashtag2').on('click',function(){
+				that.now_hashtag = 2;
+			})
+			$('#hashtag3').on('click',function(){
+				that.now_hashtag = 3;
+			})
+			$('#hashtag4').on('click',function(){
+				that.now_hashtag = 4;
+			})
+			$('#hashtag5').on('click',function(){
+				that.now_hashtag = 5;
+			})
+
+			this.section_title = this.events_titles[0];
+			window.addEventListener('scroll', this.onScroll);
+			
+		},
+		beforeDestroy() {
+			window.removeEventListener('scroll', this.onScroll);
+		},
+		methods: {
+			openMenu: function(){
+				this.open_menu = true
+			},
+			closeMenu: function(){
+				this.open_menu = false
+			},
+			menu_open_hashtag: function(hashtag_id){
+				this.now_hashtag = hashtag_id;
+				this.open_menu = false;
+				this.dialog = true;
+			},
+			shere_facebook: function() {
+				let url = `https://www.facebook.com/sharer.php?sdk=joey&u=http://localhost:3000/`;
+
+				window.open(url, 'FB share', 'height=500,width=600,top=300,left=500');
+			},
+			shere_line: function() {
+				let url = `https://social-plugins.line.me/lineit/share?url=http://localhost:3000/`;
+
+				window.open(url, 'LINE share', 'height=500,width=600,top=300,left=500');
+			},
+			open_inline_dialog(id) {
+				this.inline_dialog = true;
+				this.now_inline_dialog = this.inline_dialog_data[id]
+			},
+			onScroll(e) {
+				var pt = 100;
+				var events1_top = $('#events1').offset().top - pt;
+				var events2_top = $('#events2').offset().top - pt;
+				var events3_top = $('#events3').offset().top - pt;
+				var events4_top = $('#events4').offset().top - pt;
+
+				this.now_scroll = e.target.documentElement.scrollTop
+
+				if ( this.now_scroll <= events1_top ) {
+					this.section_title = this.events_titles[0];
+					this.show_bg_1 = false;
+					this.show_bg_2 = false;
+					this.show_bg_3 = false;
+					this.show_bg_4 = false;
+				}
+				else if( this.now_scroll > events1_top && this.now_scroll <= events2_top ){
+					this.section_title = this.events_titles[1];
+					this.show_bg_1 = true;
+					this.show_bg_2 = false;
+					this.show_bg_3 = false;
+					this.show_bg_4 = false;
+				}
+				else if (this.now_scroll > events2_top && this.now_scroll <= events3_top ) {
+					this.section_title = this.events_titles[2];
+					this.show_bg_1 = false;
+					this.show_bg_2 = true;
+					this.show_bg_3 = false;
+					this.show_bg_4 = false;
+				}
+				else if (this.now_scroll > events3_top && this.now_scroll <= events4_top ) {
+					this.section_title = this.events_titles[3];
+					this.show_bg_1 = false;
+					this.show_bg_2 = false;
+					this.show_bg_3 = true;
+					this.show_bg_4 = false;
+				}
+				else {
+					this.section_title = this.events_titles[4];
+					this.show_bg_1 = false;
+					this.show_bg_2 = false;
+					this.show_bg_3 = false;
+					this.show_bg_4 = true;
+				}
+			}
+		},
+		computed: {
+			dialog_right_hashtags: function(){
+				let dialog_right_hashtags = this.hashtags.slice(1,6);
+				return dialog_right_hashtags
+			}
+		},
+		delimiters: ['${', '}$']
+    })
+</script>
+</body>
+</html>
